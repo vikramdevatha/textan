@@ -6,7 +6,7 @@
 #   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
 #   DTM_Builder = getURL("insert raw GIT URL", ssl.verifypeer=FALSE)
 #   eval(parse(text=DTM_Builder))
-#   x_clean = DTM_Builder(x, dtm=TRUE\FALSE, tfidf=TRUE\FALSE)
+#   x_DTM = DTM_Builder(x, dtm=TRUE\FALSE, tfidf=TRUE\FALSE)
 # Note: only one argument can be TRUE - either DTM or tfidf
 # Returns a DTM with the largest cell on the top left
 
