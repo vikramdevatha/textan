@@ -3,11 +3,11 @@
 # Install the required pckages, and load them
 dependency = function{
   if (!require(udpipe)){install.packages("udpipe")}; library(udpipe)
-  if (!require(textrank)){install.packages("textrank")}; library(textrank)
-  if (!require(lattice)){install.packages("lattice")}; library(lattice)
-  if (!require(igraph)){install.packages("igraph")}; library(igraph)
-  if (!require(ggraph)){install.packages("ggraph")}; library(ggraph)
-  if (!require(wordcloud)){install.packages("wordcloud")}; library(wordcloud)
+  #if (!require(textrank)){install.packages("textrank")}; library(textrank)
+  #if (!require(lattice)){install.packages("lattice")}; library(lattice)
+  #if (!require(igraph)){install.packages("igraph")}; library(igraph)
+  #if (!require(ggraph)){install.packages("ggraph")}; library(ggraph)
+  #if (!require(wordcloud)){install.packages("wordcloud")}; library(wordcloud)
   #if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
   #if (!require(tm)) {install.packages("tm")}; library(tm)
   #if (!require(dplyr)) {install.packages("dplyr")}; library(dplyr)
