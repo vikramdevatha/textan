@@ -1,3 +1,3 @@
-if (!require(udpipe)){install.packages("udpipe")} 
-library(udpipe)
+try (require("udpipe"))||{install.packages("udpipe")} 
+library("udpipe")
   
