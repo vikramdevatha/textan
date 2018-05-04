@@ -1,5 +1,5 @@
 # Function for cleaning text
-# By default, the function removes numbers, removes stop words and does nto stem the document
+# By default, the function removes numbers, removes stop words and does not stem the document
 # Usage in local R: 
 #   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
 #   Text_Clean = getURL("insert raw GIT URL", ssl.verifypeer=FALSE)
