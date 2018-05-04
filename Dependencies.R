@@ -15,7 +15,3 @@ if (!require(tibble)) {install.packages("tibble")}; library(tibble)
 if (!require(tidyverse)) {install.packages("tidyverse")}; library(tidyverse)
 if (!require(tidyr)) {install.packages("tidyr")}; library(tidyr)
 if (!require(reticulate)) {install.packages("reticulate")}; library(reticulate)
-
-# Downloading the language models for English
-ud_model_english <- udpipe_download_model(language = "english")
-
