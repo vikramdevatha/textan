@@ -1,15 +1,7 @@
-# Function for cleaning text
-# By default, the function removes numbers, removes stop words and does not stem the document
-# Usage in local R: 
-#   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
-#   Text_Clean = getURL("https://raw.githubusercontent.com/vikramdevatha/textan/master/Text_Clean.R", ssl.verifypeer=FALSE)
-#   eval(parse(text=Text_Clean)
-# Returns clean text
-
 Text_Clean = function(text.input,
                       remove_numbers = TRUE,
                       remove_stopwords = TRUE,
-                      remove_punc = FALSE,
+                      remove_punc = TRUE,
                       stem_document = FALSE) {
   
   if (!require(tm)) {install.packages("tm")}; library(tm)
@@ -34,14 +26,14 @@ Text_Clean = function(text.input,
       text.input
   }
   
-  if(remove_punc=TRUE){
-    text.input = gsub("[^[:alnum:]]", " ", text.input) #removing anything that is not alphanumeric
-    }
-     
   if(remove_numbers){
     text.input %>%
       removeNumbers() ->
       text.input
+  }
+  
+  if(remove_punc){
+    text.input = gsub("[^[:alnum:]]", " ", text.input) #removing anything that is not alphanumeric
   }
   
   if(stem_document){
