@@ -2,7 +2,7 @@
 # By default, the function removes numbers, removes stop words and does not stem the document
 # Usage in local R: 
 #   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
-#   Text_Clean = getURL("insert raw GIT URL", ssl.verifypeer=FALSE)
+#   Text_Clean = getURL("https://raw.githubusercontent.com/vikramdevatha/textan/master/Text_Clean.R", ssl.verifypeer=FALSE)
 #   eval(parse(text=Text_Clean))
 #   x_clean = Text_Clean(x, remove_numbers=TRUE\FALSE, remove_stopwords = TRUE\FALSE, stem_document = TRUE\FALSE)
 # Returns clean text
