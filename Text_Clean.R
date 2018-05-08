@@ -33,7 +33,7 @@ Text_Clean = function(text.input,
   }
   
   if(remove_punc){
-    text.input = gsub("[^[:alnum:]]", " ", text.input) #removing anything that is not alphanumeric
+    text.input = removePunctuation(text.input, preserve_intra_word_dashes = TRUE) #removing punctuation from the document
   }
   
   if(stem_document){
