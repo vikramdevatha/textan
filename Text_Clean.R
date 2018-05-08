@@ -3,8 +3,7 @@
 # Usage in local R: 
 #   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
 #   Text_Clean = getURL("https://raw.githubusercontent.com/vikramdevatha/textan/master/Text_Clean.R", ssl.verifypeer=FALSE)
-#   eval(parse(text=Text_Clean))
-#   x_clean = Text_Clean(x, remove_numbers=TRUE\FALSE, remove_stopwords = TRUE\FALSE, remove_punc=TRUE\FALSE, stem_document = TRUE\FALSE)
+#   eval(parse(text=Text_Clean)
 # Returns clean text
 
 Text_Clean = function(text.input,
@@ -35,7 +34,7 @@ Text_Clean = function(text.input,
       text.input
   }
   
-  if(remove_punc){
+  if(remove_punc=TRUE){
     text.input = gsub("[^[:alnum:]]", " ", text.input) #removing anything that is not alphanumeric
     }
      
