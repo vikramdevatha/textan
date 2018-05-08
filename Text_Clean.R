@@ -10,7 +10,7 @@
 Text_Clean = function(text.input,
                       remove_numbers = TRUE,
                       remove_stopwords = TRUE,
-                      remove_punc = FALSE
+                      remove_punc = FALSE,
                       stem_document = FALSE) {
   
   if (!require(tm)) {install.packages("tm")}; library(tm)
