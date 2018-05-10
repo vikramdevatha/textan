@@ -4,7 +4,7 @@
 
 # Usage in local R: 
 #   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
-#   DTM_Builder = getURL("insert raw GIT URL", ssl.verifypeer=FALSE)
+#   DTM_Builder = getURL("https://raw.githubusercontent.com/vikramdevatha/textan/master/DTM_Builder.R", ssl.verifypeer=FALSE)
 #   eval(parse(text=DTM_Builder))
 #   x_clean = DTM_Builder(x, tfidf=TRUE\FALSE)
 
