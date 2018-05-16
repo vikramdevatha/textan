@@ -7,12 +7,11 @@ Text_Clean = function(text.input,
   if (!require(tm)) {install.packages("tm")}; library(tm)
   if (!require(dplyr)) {install.packages("dplyr")}; library(dplyr)
   
-  # Check to see if there is any text
+  #exception handling - check to see if there is any text
   if(length(text.input) == 0){cat("No text in document. \n"); stop}
   
-  # Remove blank lines
-  indexes <- which(text.input == "")
-  if(length(indexes) > 0){text.input <- text.input[-indexes]}  
+  indexes <- which(text.input == "") #search for blank lines
+  if(length(indexes) > 0){text.input = text.input[-indexes]} #remove the blank lines  
   text.input = gsub("<*.?>", " ", text.input) #removing HTML tags
   text.input = iconv(text.input, "latin1", "ASCII", sub=" ") #keep only ASCII characters
   text.input = tolower(text.input) #convert to lower case
