@@ -7,10 +7,16 @@ Text_Clean = function(text.input,
   if (!require(tm)) {install.packages("tm")}; library(tm)
   if (!require(dplyr)) {install.packages("dplyr")}; library(dplyr)
   
+  # Check to see if there is any text
+  if(length(text.input) == 0){cat("No text in document. \n"); stop}
+  
+  # Remove blank lines
+  indexes <- which(text.input == "")
+  if(length(indexes) > 0){text.input <- text.input[-indexes]}  
   text.input = gsub("<*.?>", " ", text.input) #removing HTML tags
   text.input = iconv(text.input, "latin1", "ASCII", sub=" ") #keep only ASCII characters
-  text.input = tolower(text.input)
-  text.input = stripWhitespace(text.input)
+  text.input = tolower(text.input) #convert to lower case
+  text.input = stripWhitespace(text.input) #remove extra white spaces
   text.input = gsub("^\\s+|\\s+$", " ", text.input) #removing space at the beginning and at end
   
   if(remove_stopwords){
