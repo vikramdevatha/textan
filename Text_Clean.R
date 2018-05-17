@@ -16,7 +16,7 @@ Text_Clean = function(text.input,
   text.input = iconv(text.input, "latin1", "ASCII", sub=" ") #keep only ASCII characters
   text.input = tolower(text.input) #convert to lower case
   text.input = stripWhitespace(text.input) #remove extra white spaces
-  text.input = gsub("^\\s+|\\s+$", " ", text.input) #removing space at the beginning and at end
+  text.input = gsub("^\\s+|\\s+$", "", text.input) #removing space at the beginning and at end
   
   if(remove_stopwords){
     #combining stop words from two sources - GIT and TM package
