@@ -1,9 +1,8 @@
 # Usage in local R: 
 #   if (!require(RCurl)) {install.packages("RCurl")}; library(RCurl)
-#   WORDCLOUD_COG = getURL("insert raw GIT URL", ssl.verifypeer=FALSE)
+#   WORDCLOUD_COG = getURL("https://raw.githubusercontent.com/vikramdevatha/textan/master/WORDCLOUD_COG.R", ssl.verifypeer=FALSE)
 #   eval(parse(text=WORDCLOUD_COG))
 #   WORDCLOUD_COG(x.text, max_edges=<number>, drop.stopwords=<TRUE/FALSE>, new.stopwords=NULL)
-
 
 WORDCLOUD_COG <- function(corpus, # text colmn only
                              max_edges = 150, 
